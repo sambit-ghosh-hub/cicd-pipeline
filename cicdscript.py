@@ -1,7 +1,7 @@
 from github import Github
 import time
 import os
-import datetime
+import platform
 import pytz
 from datetime import datetime as dt
 
@@ -26,6 +26,10 @@ timediffmins = timediff.total_seconds() / 60
 
 if timediffmins < 5:
  print("New Commit Found! Deploying new commit...")
- os.system(".\pullanddeploy.bat")
+ if platform.system() == 'Windows':
+  os.system(".\pullanddeploy.bat")
+ else:
+  os.system(".\pullanddeploy.sh")
+ 
 else:
  print("No new Commits in last 5 mins")

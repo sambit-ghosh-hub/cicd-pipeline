@@ -4,7 +4,17 @@ This script is designed to run every 5 mins with cron job and Check the dev bran
 
 We use pygithub to get status of repo and update our deployed app with new one.
 
+### Instructions
+
+Set up the flask app repo and this repo in server to be sibling directories. 
+
 Run cicdscript.py **NOT** cicd.py(This is a pure python implementation without use of cron jobs)
+
+On linux, in crontab add the following line to set up cron job for every 5 mins:
+
+```
+5 * * * * /home/osboxes/<pathtorepo>/cicd-pipeline/cicdscript.py
+```
 
 # Goals of the project
 
