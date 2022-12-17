@@ -9,9 +9,9 @@ g = Github("github_pat_11A3UOMCI0sQZqQFp6rqfq_h95E2oqllo88JXv2c104VY99JGQMJWgIZ2
 
 repo = g.get_repo("sambit-ghosh-hub/flask-hello-world")
 
-dev_branch = repo.get_branch("dev")
+deploy_branch = repo.get_branch("deploy")
 
-latest_sha = dev_branch.commit.sha
+latest_sha = deploy_branch.commit.sha
 
 commit = repo.get_commit(sha=latest_sha)
 
