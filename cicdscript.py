@@ -4,6 +4,7 @@ import os
 import platform
 import pytz
 from datetime import datetime as dt
+from datetime import timezone
 
 token = os.environ.get("GITHUBTOKENCICD")
 
@@ -18,10 +19,12 @@ latest_sha = deploy_branch.commit.sha
 commit = repo.get_commit(sha=latest_sha)
 
 committime = commit.commit.author.date
-print("Latest commit at:",committime)
+committime = committime.replace(tzinfo=timezone.utc)
 
-now = dt.now(pytz.timezone('GMT'))
+now = dt.now(pytz.timezone('UTC'))
+
 print("Time Now:",now)
+print("Latest commit at:",committime)
 
 timediff = now - committime
 timediffmins = timediff.total_seconds() / 60
