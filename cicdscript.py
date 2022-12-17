@@ -5,9 +5,11 @@ import platform
 import pytz
 from datetime import datetime as dt
 
-g = Github("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")
+token = os.environ.get("GITHUBTOKENCICD")
 
-repo = g.get_repo("sambit-ghosh-hub/flask-hello-world")
+g = Github(token)
+
+repo = g.get_repo("sambit-ghosh-hub/flask-hello-world") # change to your own repo link
 
 deploy_branch = repo.get_branch("deploy")
 

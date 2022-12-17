@@ -4,19 +4,28 @@ This script is designed to run every 5 mins with cron job and Check the 'deploy'
 
 We use pygithub to get status of repo and update our deployed app with newly commited code.
 
-### Instructions
+## Instructions
 
-Set up the flask app repo and this repo in server to be sibling directories. 
+-Set up the flask app repo and this repo in server to be sibling directories.
+ ```parent-directory
+    |- flaskapp
+    |- cicd-pipeline
+ ```
+-Set Environment variable called ```GITHUBTOKENCICD``` and put your api token in it.
+ On Linux run:
+ ```
+ export GITHUBTOKENCICD=<your token here>
+ ```
 
-Run cicdscript.py **NOT** cicd.py(This is a pure python implementation without use of cron jobs)
+-Run cicdscript.py **NOT** cicd.py(This is a pure python implementation without use of cron jobs)
 
-On linux, in crontab add the following line to set up cron job for every 5 mins:
+-On linux, in crontab add the following line to set up cron job for every 5 mins:
 
-```
-5 * * * * /home/osboxes/<pathtorepo>/cicd-pipeline/cicdscript.py
-```
+ ```
+ 5 * * * * /home/osboxes/<pathtorepo>/cicd-pipeline/cicdscript.py
+ ```
 
-# Goals of the project
+# Targets of the project
 
 1. First create a GitHub repository.
 2. Create a development branch

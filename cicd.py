@@ -2,7 +2,8 @@ from github import Github
 import time
 import os
 
-g = Github("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") #change this to your own token
+token = os.environ.get("GITHUBTOKENCICD")
+g = Github(token) #change this to your own token
 
 repo = g.get_repo("sambit-ghosh-hub/flask-hello-world")#change this to your owm flask app
 
