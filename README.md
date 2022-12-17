@@ -7,7 +7,8 @@ We use pygithub to get status of repo and update our deployed app with newly com
 ## Instructions
 
 -Set up the flask app repo and this repo in server to be sibling directories.
- ```parent-directory
+ ``` 
+    parent-directory
     |- flaskapp
     |- cicd-pipeline
  ```
