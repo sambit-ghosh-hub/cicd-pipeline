@@ -16,10 +16,10 @@ latest_sha = dev_branch.commit.sha
 commit = repo.get_commit(sha=latest_sha)
 
 committime = commit.commit.author.date
-print(committime)
+print("Latest commit at:",committime)
 
 now = dt.now(pytz.timezone('GMT'))
-print(now)
+print("Time Now:",now)
 
 timediff = now - committime
 timediffmins = timediff.total_seconds() / 60
