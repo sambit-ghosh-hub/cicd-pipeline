@@ -1,1 +1,1 @@
-/usr/bin/python /home/osboxes/class13/cicdscript.py
+/usr/bin/python /home/osboxes/class13/pythonscripts/cicdscript.py
