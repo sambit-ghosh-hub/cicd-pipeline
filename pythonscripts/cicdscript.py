@@ -34,7 +34,7 @@ if timediffmins < 5:
  if platform.system() == 'Windows':
   os.system(".\batchscripts\pullanddeploy.bat")
  else:
-  os.system("./pullanddeploy.sh")
+  os.system('cd "$(dirname "$0")";./pullanddeploy.sh')
  
 else:
  print("No new Commits in last 5 mins")
