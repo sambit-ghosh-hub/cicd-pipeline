@@ -1,3 +1,3 @@
 cd ..
 cd ..
-pytest tests/
+pytest /home/osboxes/class13/tests/

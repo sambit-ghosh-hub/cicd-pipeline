@@ -25,7 +25,7 @@ We use pygithub to get status of repo and update our deployed app with newly com
 >On linux, in crontab add the following line to set up cron job for every 5 mins:
 
  ```
- 5 * * * * /home/osboxes/<pathtorepo>/cicd-pipeline/bashscripts/run_cicd.sh
+ */5 * * * * /home/osboxes/<pathtorepo>/cicd-pipeline/bashscripts/run_cicd.sh
  ```
 
 # Targets of the project
