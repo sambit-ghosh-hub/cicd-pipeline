@@ -29,7 +29,7 @@ print("Latest commit at:",committime)
 timediff = now - committime
 timediffmins = timediff.total_seconds() / 60
 
-if timediffmins < 15:
+if timediffmins < 150:
  print("New Commit Found! Deploying new commit...")
  if platform.system() == 'Windows':
   os.system(".\batchscripts\pullanddeploy.bat")
