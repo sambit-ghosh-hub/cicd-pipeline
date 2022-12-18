@@ -25,7 +25,7 @@ while True:
  if sha != latest_sha:
   print("Found new commit. Deploying...")
   latest_sha = sha
-  os.system(".\pullanddeploy.bat")
+  os.system(".\batchscript\pullanddeploy.bat")
   pass
  
  time.sleep(1*60)

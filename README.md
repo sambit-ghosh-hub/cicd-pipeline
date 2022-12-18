@@ -6,24 +6,26 @@ We use pygithub to get status of repo and update our deployed app with newly com
 
 ## Instructions
 
--Set up the flask app repo and this repo in server to be sibling directories.
+>Set up python and required liraries using the ```setup.sh``` script on linux, Manually install in case of Windows
+
+>Set up the flask app repo and this repo in server to be sibling directories.
  ``` 
     parent-directory
     |- flaskapp
     |- cicd-pipeline
  ```
--Set Environment variable called ```GITHUBTOKENCICD``` and put your api token in it.
+>Set Environment variable called ```GITHUBTOKENCICD``` and put your api token in it.
  On Linux run:
  ```
  export GITHUBTOKENCICD=<your token here>
  ```
 
--Run cicdscript.py **NOT** cicd.py(This is a pure python implementation without use of cron jobs)
+>Run cicdscript.py **NOT** cicd.py(This is a pure python implementation without use of cron jobs)
 
--On linux, in crontab add the following line to set up cron job for every 5 mins:
+>On linux, in crontab add the following line to set up cron job for every 5 mins:
 
  ```
- 5 * * * * /home/osboxes/<pathtorepo>/cicd-pipeline/run_cicd.sh
+ 5 * * * * /home/osboxes/<pathtorepo>/cicd-pipeline/bashscripts/run_cicd.sh
  ```
 
 # Targets of the project

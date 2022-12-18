@@ -32,9 +32,9 @@ timediffmins = timediff.total_seconds() / 60
 if timediffmins < 5:
  print("New Commit Found! Deploying new commit...")
  if platform.system() == 'Windows':
-  os.system(".\pullanddeploy.bat")
+  os.system(".\batchscripts\pullanddeploy.bat")
  else:
-  os.system(".\pullanddeploy.sh")
+  os.system("./bashscripts/pullanddeploy.sh")
  
 else:
  print("No new Commits in last 5 mins")
