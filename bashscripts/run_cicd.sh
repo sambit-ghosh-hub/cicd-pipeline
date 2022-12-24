@@ -1,1 +1,1 @@
-/usr/bin/python /home/osboxes/class13/cicd-pipeline/pythonscripts/cicdscript.py
+usr/bin/nohup /usr/bin/python /home/osboxes/class13/cicd-pipeline/pythonscripts/cicdscript.py
